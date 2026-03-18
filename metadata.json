@@ -1,0 +1,5 @@
+{
+  "name": "Workout Planner",
+  "description": "A personalized workout planning application powered by Gemini. Enter your sport, goals, and equipment to get a custom training regimen.",
+  "requestFramePermissions": []
+}
