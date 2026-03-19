@@ -77,29 +77,31 @@ export default function App() {
           </button>
         </div>
 
-        <header className="text-center mb-16 space-y-4">
+        <header className="text-center mb-20 space-y-6">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
-            className="inline-flex items-center justify-center p-3 bg-emerald-600 text-white rounded-2xl shadow-xl shadow-emerald-200 dark:shadow-none mb-4"
+            className="inline-flex items-center justify-center p-4 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl shadow-2xl mb-6"
           >
             <Dumbbell className="w-8 h-8" />
           </motion.div>
-          <motion.h1 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="text-5xl md:text-6xl font-black tracking-tight text-gray-900 dark:text-white"
-          >
-            Workout <span className="text-emerald-600">Planner</span>
-          </motion.h1>
-          <motion.p 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.1 }}
-            className="text-xl text-gray-500 dark:text-zinc-400 max-w-2xl mx-auto font-medium"
-          >
-            Professional training regimens tailored to your sport, goals, and equipment.
-          </motion.p>
+          <div className="space-y-2">
+            <motion.h1 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              className="text-6xl md:text-7xl font-black tracking-tight text-zinc-900 dark:text-white font-display"
+            >
+              FORGE<span className="text-emerald-500">.</span>
+            </motion.h1>
+            <motion.p 
+              initial={{ y: 20, opacity: 0 }}
+              animate={{ y: 0, opacity: 1 }}
+              transition={{ delay: 0.1 }}
+              className="text-lg text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto font-medium uppercase tracking-[0.2em] text-xs"
+            >
+              Workout Architect
+            </motion.p>
+          </div>
         </header>
 
         <main>
@@ -141,8 +143,8 @@ export default function App() {
           </AnimatePresence>
         </main>
 
-        <footer className="mt-20 text-center text-gray-400 dark:text-zinc-600 text-sm font-medium">
-          <p>Powered by Gemini.</p>
+        <footer className="mt-8 text-center text-zinc-400 dark:text-zinc-600 text-[10px] font-bold uppercase tracking-widest">
+          <p>Powered by Gemini</p>
         </footer>
       </div>
 
