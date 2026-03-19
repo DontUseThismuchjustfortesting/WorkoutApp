@@ -77,7 +77,7 @@ export default function App() {
           </button>
         </div>
 
-        <header className="text-center mb-20 space-y-6">
+        <header className="text-center mb-12 md:mb-20 space-y-6">
           <motion.div
             initial={{ scale: 0.8, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -89,7 +89,7 @@ export default function App() {
             <motion.h1 
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
-              className="text-6xl md:text-7xl font-black tracking-tight text-zinc-900 dark:text-white font-display"
+              className="text-5xl md:text-7xl font-black tracking-tight text-zinc-900 dark:text-white font-display"
             >
               FORGE<span className="text-emerald-500">.</span>
             </motion.h1>
@@ -97,7 +97,7 @@ export default function App() {
               initial={{ y: 20, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.1 }}
-              className="text-lg text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto font-medium uppercase tracking-[0.2em] text-xs"
+              className="text-zinc-500 dark:text-zinc-400 max-w-xl mx-auto font-medium uppercase tracking-[0.2em] text-[10px] md:text-xs"
             >
               Workout Architect
             </motion.p>

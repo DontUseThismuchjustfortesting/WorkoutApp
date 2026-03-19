@@ -15,12 +15,12 @@ export function WorkoutDisplay({ plan, onDayClick }: WorkoutDisplayProps) {
       animate={{ opacity: 1, scale: 1 }}
       className="space-y-10"
     >
-      <div className="bg-white dark:bg-zinc-900 p-10 rounded-[2.5rem] shadow-2xl shadow-zinc-200/50 dark:shadow-none border border-zinc-100 dark:border-zinc-800">
+      <div className="bg-white dark:bg-zinc-900 p-6 md:p-10 rounded-[2.5rem] shadow-2xl shadow-zinc-200/50 dark:shadow-none border border-zinc-100 dark:border-zinc-800">
         <div className="space-y-4">
-          <h2 className="text-4xl font-black text-zinc-900 dark:text-white tracking-tight font-display uppercase">
+          <h2 className="text-2xl md:text-4xl font-black text-zinc-900 dark:text-white tracking-tight font-display uppercase">
             {plan.title}
           </h2>
-          <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed text-lg font-medium">
+          <p className="text-zinc-500 dark:text-zinc-400 leading-relaxed text-base md:text-lg font-medium">
             {plan.description}
           </p>
         </div>
@@ -34,7 +34,7 @@ export function WorkoutDisplay({ plan, onDayClick }: WorkoutDisplayProps) {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: index * 0.05 }}
             onClick={() => onDayClick(item.day, item.activity, item.details)}
-            className="group bg-white dark:bg-zinc-900 p-8 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-800 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all flex flex-col md:flex-row gap-8 items-start md:items-center cursor-pointer hover:shadow-xl hover:scale-[1.01]"
+            className="group bg-white dark:bg-zinc-900 p-6 md:p-8 rounded-3xl shadow-sm border border-zinc-100 dark:border-zinc-800 hover:border-emerald-500 dark:hover:border-emerald-500 transition-all flex flex-col md:flex-row gap-4 md:gap-8 items-start md:items-center cursor-pointer hover:shadow-xl hover:scale-[1.01]"
           >
             <div className="flex-shrink-0 w-full md:w-40">
               <div className="flex items-center gap-3 text-emerald-600 dark:text-emerald-400 font-black text-xs uppercase tracking-[0.2em] font-display">
@@ -63,12 +63,12 @@ export function WorkoutDisplay({ plan, onDayClick }: WorkoutDisplayProps) {
         ))}
       </div>
 
-      <div className="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 p-10 rounded-[2.5rem] shadow-2xl">
+      <div className="bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 p-6 md:p-10 rounded-[2.5rem] shadow-2xl">
         <div className="flex items-center gap-4 mb-8">
           <div className="p-3 bg-emerald-500 rounded-2xl">
             <Info className="w-6 h-6 text-white" />
           </div>
-          <h3 className="text-2xl font-black font-display uppercase tracking-tight">Strategic Directives</h3>
+          <h3 className="text-xl md:text-2xl font-black font-display uppercase tracking-tight">Strategic Directives</h3>
         </div>
         <ul className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {plan.tips.map((tip, index) => (

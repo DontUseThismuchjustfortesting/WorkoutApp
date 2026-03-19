@@ -36,7 +36,7 @@ export function WorkoutForm({ onSubmit, isLoading }: WorkoutFormProps) {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       onSubmit={handleSubmit}
-      className="space-y-8 bg-white dark:bg-zinc-900 p-10 rounded-[2.5rem] shadow-2xl shadow-zinc-200/50 dark:shadow-none border border-zinc-100 dark:border-zinc-800"
+      className="space-y-8 bg-white dark:bg-zinc-900 p-6 md:p-10 rounded-[2.5rem] shadow-2xl shadow-zinc-200/50 dark:shadow-none border border-zinc-100 dark:border-zinc-800"
     >
       <div className="space-y-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -91,14 +91,14 @@ export function WorkoutForm({ onSubmit, isLoading }: WorkoutFormProps) {
             <label className="flex items-center gap-2 text-xs font-bold text-zinc-400 dark:text-zinc-500 uppercase tracking-widest font-display">
               Proficiency Level
             </label>
-            <div className="flex gap-3">
+            <div className="grid grid-cols-3 gap-2">
               {levels.map((level) => (
                 <button
                   key={level.value}
                   type="button"
                   onClick={() => setFormData({ ...formData, fitnessLevel: level.value as any })}
                   className={cn(
-                    "flex-1 px-4 py-3 rounded-2xl text-xs font-bold transition-all border uppercase tracking-tighter",
+                    "px-1 md:px-4 py-3 rounded-2xl text-[10px] md:text-xs font-bold transition-all border uppercase tracking-tighter",
                     formData.fitnessLevel === level.value
                       ? "bg-zinc-900 dark:bg-white border-zinc-900 dark:border-white text-white dark:text-zinc-900 shadow-xl"
                       : "bg-white dark:bg-zinc-950 border-zinc-200 dark:border-zinc-800 text-zinc-500 dark:text-zinc-500 hover:border-zinc-300 dark:hover:border-zinc-700"
@@ -167,16 +167,16 @@ export function WorkoutForm({ onSubmit, isLoading }: WorkoutFormProps) {
       <button
         disabled={isLoading}
         type="submit"
-        className="w-full py-5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-black text-sm uppercase tracking-[0.2em] shadow-2xl shadow-zinc-400/20 dark:shadow-none transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed hover:scale-[1.02] active:scale-[0.98] font-display"
+        className="w-full py-5 bg-zinc-900 dark:bg-white text-white dark:text-zinc-900 rounded-2xl font-black text-[10px] md:text-sm uppercase tracking-[0.1em] md:tracking-[0.2em] shadow-2xl shadow-zinc-400/20 dark:shadow-none transition-all flex items-center justify-center gap-3 disabled:opacity-70 disabled:cursor-not-allowed hover:scale-[1.02] active:scale-[0.98] font-display"
       >
         {isLoading ? (
           <>
-            <Loader2 className="w-5 h-5 animate-spin" />
+            <Loader2 className="w-4 h-4 md:w-5 md:h-5 animate-spin" />
             ARCHITECTING PLAN...
           </>
         ) : (
           <>
-            <Dumbbell className="w-5 h-5" />
+            <Dumbbell className="w-4 h-4 md:w-5 md:h-5" />
             GENERATE ARCHITECTURE
           </>
         )}
